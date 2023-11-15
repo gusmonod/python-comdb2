@@ -189,5 +189,6 @@ jobs:
           LDFLAGS="-Wl,-rpath,/opt/bb/lib"
           python -m pip install ./python-comdb2-sdist[tests]
         '
+      - uses: lhotari/action-upterm
       - name: Run Tests
         run: (cd python-comdb2-sdist/tests && python -m pytest -vvv)
